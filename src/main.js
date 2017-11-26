@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui'
 import 'normalize.css/normalize.css'
 import './assets/reset.css'
+import 'element-ui/lib/theme-chalk/index.css'
 import Icons from './assets/icons.js'
 
 Vue.config.productionTip = false
+Vue.use(ElementUI)
 
 /* eslint-disable no-new */
 new Vue({
@@ -15,7 +18,7 @@ new Vue({
   router,
   // template: '<App/>',
   // components: { App }
-  render: createElement => createElement(App),
+  render: h => h(App),
   created () {
     // 不会重新解析它正在使用的元素，不会破坏元素内的现有元素。
     // 避免了额外的序列化步骤，使其比直接innerHTML操作更快。

@@ -1,11 +1,20 @@
-export const name = (state) => {
-  return state.name
+// import {removeEmptyAttrs} from '../util/basic'
+
+export const selected = (state) => {
+  return state.selected
 }
 
-export const age = (state) => {
-  return state.age
+export const resume = (state) => {
+  return state.resume
 }
 
-export const other = (state) => {
-  return `My name is ${state.name}, I am $(state.age) years old.`
+// export const resumeContent = (state) => {
+//   var copiedResume = Object.assign({}, state.resume)
+//   removeEmptyAttrs(copiedResume)
+//   console.log('state', state.resume)
+//   return copiedResume
+// }
+
+export const resumeConfig = (state) => {
+  return state.resumeConfig
 }

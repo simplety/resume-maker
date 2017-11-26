@@ -4,18 +4,20 @@
     <div>
       <a href="javascript:void(0)">Save</a>
       <a href="javascript:void(0)">View</a>
+      <a href="javascript:void(0)" @click="clearAllInfo">Clear</a>
     </div>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'app'
-  // data: function () {
-  //   return {
-  //     txt: 'kaisla'
-  //   }
-  // }
+  name: 'app',
+  methods: {
+    clearAllInfo () {
+      this.$store.commit('clearAll')
+      localStorage.setItem('resume', JSON.stringify(this.$store.state.resume))
+    }
+  }
 }
 </script>
 
@@ -23,8 +25,8 @@ export default {
 <style scoped>
 header {
   background: white;
-  width: 100%;
-  height: 3rem;
+  min-height: 2.1875rem;
+  height: $nav-width;
   padding: 0 .625rem;
   border: .0625rem solid blue;
   display: flex;

@@ -7,7 +7,7 @@ import actions from './actions'
 import m1 from './modules/m1.js'
 import m2 from './modules/m2.js'
 
-vuex.use(vuex)
+vue.use(vuex)
 
 export default new vuex.Store({
   state,

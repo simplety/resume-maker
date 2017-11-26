@@ -1,6 +1,7 @@
 # resumer
 
-> A Vue.js project
+> A web-App to easily write and export your Resume.
+> Vue2.0 + Webpack 3.0
 
 ## Build Setup
 

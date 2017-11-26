@@ -1,9 +1,16 @@
 // 异步操作 && 多个commit时调用
-import * as types from './mutation-types.js'
+// import * as types from './mutation-types.js'
+
+// export default {
+//   saveAll ({commit}, {selected, resume}) {
+//     commit(types.SET_SELECTED, selected)
+//     commit(types.SET_RESUME, resume)
+//   }
+// }
 
 export default {
-  nameAsyn ({commit}, {age, name}) {
-    commit(types.SET_NAME, name)
-    commit(types.SET_AGE, age)
+  saveResume ({state, commit}, payload) {
+    payload = JSON.stringify(payload)
+    window.localStorage.setItem('resume', payload)
   }
 }
